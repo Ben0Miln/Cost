@@ -3,21 +3,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GP EAP Cost Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employee Benefits Cost Calculator</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>GP EAP Cost Calculator</h1>
-    <form id="calcForm">
-      <input type="number" id="employeeCount" placeholder="Employee Count" required />
-      <input type="number" id="sessionCount" placeholder="Session Count" required />
-      <input type="number" id="premiumMarkup" placeholder="Premium Markup (%)" required />
-      <input type="number" id="profitCost" placeholder="Profit Cost ($)" required />
-      <button type="submit">Calculate</button>
-    </form>
-    <div id="results"></div>
+  <div class="calculator-container">
+    <h1>Employee Benefits Cost Calculator</h1>
+    <p class="subtitle">Calculate monthly per-employee costs for Basic, Standard, and Premium plans</p>
+
+    <div class="grid">
+      <div class="input-section">
+        <h2>Input Parameters</h2>
+        <form id="calcForm">
+          <label>Employee Count
+            <input type="number" id="employeeCount" placeholder="e.g., 100" required />
+            <small>Number of employees in your organization</small>
+          </label>
+
+          <label>Session Count
+            <input type="number" id="sessionCount" placeholder="e.g., 100" required />
+            <small>Total number of sessions provided annually</small>
+          </label>
+
+          <label>Premium Markup (%)
+            <input type="number" id="premiumMarkup" placeholder="e.g., 18" required />
+            <small>Percent markup applied to Premium plan</small>
+          </label>
+
+          <label>Profit Cost ($)
+            <input type="number" id="profitCost" placeholder="e.g., 10000" required />
+            <small>Profit amount added to Basic plan</small>
+          </label>
+
+          <button type="submit">Calculate Costs</button>
+        </form>
+
+        <div class="constants">
+          <p><strong>Calculation Constants</strong></p>
+          <p>GP Session: $49.99</p>
+          <p>Psychologist: $220.00</p>
+          <p>GP Ratio: 75%</p>
+          <p>24/7 Hotline: $3,600/year</p>
+        </div>
+      </div>
+
+      <div class="output-section">
+        <h2>Monthly Cost Per Employee</h2>
+        <div id="results"></div>
+      </div>
+    </div>
+
+    <div class="how-it-works">
+      <h2>How It Works</h2>
+      <div class="info-blocks">
+        <div>
+          <h3>🧑‍⚕️ Session Allocation</h3>
+          <p>75% GP sessions at $49.99 each, 25% Psychologist sessions at $220 each</p>
+        </div>
+        <div>
+          <h3>📞 24/7 Hotline</h3>
+          <p>Standard and Premium plans include $3,600 annual hotline service</p>
+        </div>
+        <div>
+          <h3>🏰 Premium Benefits</h3>
+          <p>Premium plan includes customizable markup percentage for enhanced services</p>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>

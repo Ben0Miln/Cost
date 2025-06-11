@@ -1,34 +1,126 @@
+/* styles.css */
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9fafb;
+  color: #111827;
+  margin: 0;
   padding: 20px;
 }
-.container {
-  background: white;
-  padding: 30px;
-  max-width: 500px;
+
+.calculator-container {
+  max-width: 1200px;
   margin: auto;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
+
 h1 {
+  font-size: 28px;
+  margin-bottom: 0;
   text-align: center;
 }
-form input, form button {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 30px;
 }
-form button {
-  background: #007BFF;
+
+.grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.input-section, .output-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.input-section h2, .output-section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+label input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+}
+
+small {
+  display: block;
+  color: #6b7280;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+button {
+  padding: 12px;
+  width: 100%;
+  background-color: #2563eb;
   color: white;
   border: none;
+  border-radius: 6px;
+  font-size: 16px;
   cursor: pointer;
+  margin-top: 10px;
 }
-form button:hover {
-  background: #0056b3;
+
+button:hover {
+  background-color: #1d4ed8;
 }
+
+.constants p {
+  font-size: 13px;
+  margin: 4px 0;
+}
+
 #results p {
-  font-weight: bold;
+  background: #f3f4f6;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.how-it-works {
+  margin-top: 40px;
+}
+
+.info-blocks {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.info-blocks div {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.info-blocks h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.info-blocks p {
+  font-size: 14px;
+  color: #374151;
 }

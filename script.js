@@ -26,8 +26,9 @@ document.getElementById("calcForm").addEventListener("submit", function(e) {
   const premiumMonthly = premiumTotal / 12 / employeeCount;
 
   document.getElementById("results").innerHTML = `
-    <p><strong>Basic Plan:</strong> $${basicMonthly.toFixed(2)} per employee/month</p>
-    <p><strong>Standard Plan:</strong> $${standardMonthly.toFixed(2)} per employee/month</p>
-    <p><strong>Premium Plan:</strong> $${premiumMonthly.toFixed(2)} per employee/month</p>
+    <div class="result-box"><strong>Basic Plan:</strong><br>$${basicMonthly.toFixed(2)} per employee per month</div>
+    <div class="result-box"><strong>Standard Plan:</strong><br>$${standardMonthly.toFixed(2)} per employee per month</div>
+    <div class="result-box"><strong>Premium Plan:</strong><br>$${premiumMonthly.toFixed(2)} per employee per month</div>
+    <p>Calculation Breakdown:<br>GP Sessions (75%): ${gpSessions}<br>Psychologist Sessions (25%): ${psychSessions}<br>Annual Basic Cost: $${basicTotal.toFixed(2)}</p>
   `;
 });
